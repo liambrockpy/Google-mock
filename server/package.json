@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "node": "^19.1.0"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.1"
+  },
+  "name": "google-mock",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liambrockpy/Google-mock.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liambrockpy/Google-mock/issues"
+  },
+  "homepage": "https://github.com/liambrockpy/Google-mock#readme"
+}
