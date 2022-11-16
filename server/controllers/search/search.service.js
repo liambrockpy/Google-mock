@@ -5,8 +5,17 @@ const googleSearchApi = `https://www.googleapis.com/customsearch/v1?key=${apiKey
 const findAllByQuery = async (clientQuery) => new Promise(async (res, rej) => {
     const results = await fetch(`${googleSearchApi}${clientQuery}`)
         .then(res => res.json())
-        .catch(err => rej(err))
-        .then(data => data.items)
+        .catch(err => {
+            console.warn('[API Response Error]: ', err)
+            return rej(err)
+        })
+        .then(data => {
+            if (data.error) {
+                console.warn('[API Response Error]: ', data.error)
+                return rej(data)
+            }
+            return data.items
+        })
 
     res(results)
 })
@@ -14,8 +23,15 @@ const findAllByQuery = async (clientQuery) => new Promise(async (res, rej) => {
 const findRandomByQuery = async (clientQuery) => new Promise(async (res, rej) => {
     const results = await fetch(`${googleSearchApi}${clientQuery}`)
         .then(res => res.json())
-        .catch(err => rej(err))
+        .catch(err => {
+            console.warn('[API Response Error]: ', err)
+            return rej(err)
+        })
         .then(data => {
+            if (data.error) {
+                console.warn('[API Response Error]: ', data.error)
+                return rej(data)
+            }
             const resultsLength = data.items.length
             const randomIndex = Math.floor(Math.random() * resultsLength)
             return data.items[randomIndex]
