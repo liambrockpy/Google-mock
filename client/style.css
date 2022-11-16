@@ -16,10 +16,9 @@ h3 {
 
 .logo {
     display: block;
-    max-height: 100px;
     position: relative;
     justify-content: center;
-    width: 50%;
+    width: 60%;
     height: 100%;
     margin: auto;
 }
@@ -42,16 +41,16 @@ div.textbox img {
 div.textbox{
     display: flex;
     margin: auto;
-    z-index: 3;
     height: 44px;
-    border: 1px solid #5f6368;
-    border-radius: 24px;
-    width: 550px; 
-    transition: 0.5s;
+    border: 1px solid #1d71c4;
+    width: 600px; 
+    transition: 0.6s;
+    border-radius: 25px;
+    z-index: 3;
 }
 
 div.textbox:hover {
-    background-color: #363534;
+    background-color: #eeeeee;
     transition: 0.5s;
 
 }
@@ -77,28 +76,29 @@ div.buttons {
     text-align: center;
 }
 span.button {
-    width: 40px;
     text-align: center;
-    margin: 6px;
+    margin: 5px;
 }
 
 span.button input {
     background-color: #dadada;
-    padding: 0, 16px;
-    color: white;
-font-family:Verdana, Geneva, Tahoma, sans-serif;
-    height: 36px;
-    width: 130px;
+    color: rgb(209, 20, 20);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    width: 150px;
+    height: 35px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 14px;
-    margin: 11px, 6px;
-    padding: 10px;
 }
 
 span.button input:hover {
-    border: 0.5px solid white;
+    border: 0.5px solid  rgb(255, 192, 4);
     cursor: pointer;
+    transition: 0.6s;
+    box-shadow: 0px 1px 2px rgb(5, 130, 233);
+    color: rgb(4, 54, 255);
+    
+    /* color: rgb(5, 130, 233); */
 }
 
 
