@@ -16,7 +16,7 @@ searchRouter.get('/', async (req, res) => {
     const searchQuery = req.query
     try {
         const allResults = searchService.findAllByQuery(searchQuery)
-        res.status(200).json({ testMessage: 'Hello, World!' })
+        res.status(200).send(allResults)
     } catch (err) {
         res.status(500).send(err.message)
     }
@@ -26,7 +26,7 @@ searchRouter.get('/random', async (req, res) => {
     const searchQuery = req.query
     try {
         const randomResult = searchService.findRandomByQuery(searchQuery)
-        res.status(200).json({ testMessage: 'Hello, World!' })
+        res.status(200).send(randomResult)
     } catch (err) {
         res.status(500).send(err.message)
     }
