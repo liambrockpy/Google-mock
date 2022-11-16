@@ -1,3 +1,9 @@
 */node_modules
+node_modules
 */package-lock.json
+<<<<<<< HEAD
 .DS_Storegit 
+=======
+package-lock.json
+.DS_Store
+>>>>>>> 03a90c30dc576555221955011ebb0be9e1053632
