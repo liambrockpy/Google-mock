@@ -94,22 +94,6 @@ form.addEventListener('submit', (e) => {
     randomCount = 0
 })
 
-// const randomFetch = async (item) => {
-//     const randData = await fetch(`http://localhost:3000/random/${item}`)
-//     const randomData = await randData.json();
-//     console.log(randomData)
-
-//     window.location.href = randomData.url
-// }
-
-// async function randomWebsite(){
-//     let dbFile3 = await fetch(`http://localhost:3000/random`)
-//     let googleData3 = await dbFile3.json();
-//     console.log(googleData3);
-
-//     window.location.href = googleData3.url
-// }
-
 
 const btn = document.getElementById('submitButton1');
 
