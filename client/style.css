@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+body {
+    background: #ffffff;
+}
+
+p {
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3 {
+    color: #eee6b4;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.logo {
+    display: block;
+    position: relative;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    margin: auto;
+}
+
+div.logo img {
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+div.textbox img {
+    position: relative;
+    width: 25px;
+    height: auto;
+    margin-left: 10px;
+    align-content: center;
+}
+
+div.textbox{
+    display: flex;
+    margin: auto;
+    height: 44px;
+    border: 1px solid #1d71c4;
+    width: 600px; 
+    transition: 0.6s;
+    border-radius: 25px;
+    z-index: 3;
+}
+
+div.textbox:hover {
+    background-color: #eeeeee;
+    transition: 0.5s;
+
+}
+
+input#search {
+    outline: none;
+    border: none;
+    width: 460px;
+    color: white;
+    font-size: 16px;
+    height: 25px;
+    margin: auto;
+    background-color: transparent;
+    outline: none;
+}
+
+div.buttons {
+    display: block;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 600px;
+    text-align: center;
+}
+span.button {
+    text-align: center;
+    margin: 5px;
+}
+
+span.button input {
+    background-color: #dadada;
+    color: rgb(209, 20, 20);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    width: 150px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+span.button input:hover {
+    border: 0.5px solid  rgb(255, 192, 4);
+    cursor: pointer;
+    transition: 0.6s;
+    box-shadow: 0px 1px 2px rgb(5, 130, 233);
+    color: rgb(4, 54, 255);
+    
+    /* color: rgb(5, 130, 233); */
+}
+
+
+
+a {
+    display: block;
+    font-size: large;
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    background-color: #eee6b4;
+    border: solid;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    transition: 0.5s;
+    line-height: 50px;
+    
+}
+
+a:hover {
+    color: white;
+    background-color: rgb(209, 206, 206);
+    transition: 0.5s;
+}
+
