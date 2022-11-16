@@ -2,9 +2,14 @@
   "name": "google-mock",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "nodemon ./server/server.js",
+    "coverage": "jest --coverage"
+  },
+  "jest": {
+    "coverageDirectory": "./server/tests/coverage"
   },
   "repository": {
     "type": "git",
