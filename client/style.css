@@ -2,6 +2,13 @@
 
 body {
     background: #ffffff;
+    margin: 0px;
+}
+
+body, input, button {
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    color: #202124;
 }
 
 p {
@@ -102,8 +109,8 @@ span.button input:hover {
 }
 
 
-
-a {
+/* ? a tags to still be used? */
+/* a {
     display: block;
     font-size: large;
     text-decoration: none;
@@ -126,5 +133,67 @@ a:hover {
     color: white;
     background-color: rgb(209, 206, 206);
     transition: 0.5s;
+} */
+
+footer a {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: arial,sans-serif;
 }
+
+footer a:hover, footer a:active {
+    text-decoration: underline;
+}
+
+footer {
+    background: #f2f2f2;
+}
+
+.footer-country {
+    padding: 15px 30px;
+    border-bottom: 1px solid #dadce0;
+    font-size: 15px;
+    color: #70757a;
+}
+
+.footer-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer-about > div:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    min-width: 30%
+}
+
+.footer-link {
+    color: #70757a;
+    display: block;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+.footer-about > div:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-about > div:last-child {
+    justify-content: flex-end;
+    min-width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.carbon-img {
+    height: 14px;
+    margin-right: 6px;
+}
+
+
 
