@@ -5,7 +5,7 @@
 ### Installation
 
 - Clone or download the repo.
-- Navigate to server folder.
+- Navigate to `server` folder.
 - Run `npm install` to install dependencies.
 
 ### Usage
@@ -22,14 +22,15 @@
 
 ### server.js
 
-[x] ...
+[x] Created tests for api routes  
+[x] Added google api for fetching data in services file
 
 ## Wins & Challenges
 
 ### Wins
 
-- ...
+- Using Google's api to fetch results
 
 ### Challenges
 
-- ...
+- Github issues when starting the project
