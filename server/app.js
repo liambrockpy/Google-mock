@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const morgan = require('morgan')
-const searchRouter = require('./controllers/search/search.router.js')
+const searchRouter = require('./controllers/search/search.router')
 
 const app = express()
 
