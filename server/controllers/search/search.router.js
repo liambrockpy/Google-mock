@@ -13,9 +13,9 @@ const searchRouter = express.Router()
 
 // search query route
 searchRouter.get('/', async (req, res) => {
-    const searchQuery = req.query
+    const searchQuery = req.query.value
     try {
-        const allResults = searchService.findAllByQuery(searchQuery)
+        const allResults = await searchService.findAllByQuery(searchQuery)
         res.status(200).send(allResults)
     } catch (err) {
         res.status(500).send(err.message)
@@ -23,9 +23,9 @@ searchRouter.get('/', async (req, res) => {
 })
 
 searchRouter.get('/random', async (req, res) => {
-    const searchQuery = req.query
+    const searchQuery = req.query.value
     try {
-        const randomResult = searchService.findRandomByQuery(searchQuery)
+        const randomResult = await searchService.findRandomByQuery(searchQuery)
         res.status(200).send(randomResult)
     } catch (err) {
         res.status(500).send(err.message)
