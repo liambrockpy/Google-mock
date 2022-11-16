@@ -8,9 +8,6 @@ resultList.innerHTML = "";
 
 function getGoogleResults(e){
     e.preventDefault();
-    // let h1 = document.getElementById("marvelname");
-    // let h2 = document.getElementById("director");
-
     let usersearch =document.getElementById("search_bar").value;
     let url = `http://localhost:3000/search?value=${usersearch}`;
     fetch(url)
@@ -18,11 +15,26 @@ function getGoogleResults(e){
     .catch(data => console.log(data))
     .then(data => {
         console.log(data);
-        // h1.textContent=data.name;
-        // h2.textContent=data.director;
-        // h3.textContent=data.phase;
-        // h4.textContent=data.cast;
-        // let img = "img/" + data.id + ".jpeg";
+
+        // console.log(data[10]);
+
+        for(let i=0; i<11; i++){    
+            let searchInfo = data;
+            let searchtitle =  data.title;
+            let searchlink =  data.link;
+            let search =  data.metatags;
+            let div = document.createElement('div')
+            div.className = `div${i}`
+            resultList.appendChild(div)
+            let gap = document.createElement('br')
+            let li = document.createElement('li');
+            li.textContent = JSON.stringify(searchInfo[i]);
+            li.className = "breadCrumb";
+            div.appendChild(li); 
+
+            
+        }
+        // document.getElementById("dogpic").setAttribute("src", dogurl);
         // h5.setAttribute("src", img);
         // h5.setAttribute("src", `$(data.name).jpeg`);
     })
