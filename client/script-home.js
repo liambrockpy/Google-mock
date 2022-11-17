@@ -9,10 +9,10 @@ searchAllBtn.addEventListener('click', getGoogleResults)
 searchLuckyBtn.addEventListener('click', getLucky)
 
 function getGoogleResults(e) {
-    e.preventDefault();
-    let searchTerm = searchTermMain.value;
-    let miz = "C:/Users/Miz/Desktop/Kamkwamba/assignments/googleliam/Google-mock";
-    window.location.href = `../client/search.html?search=${searchTerm}`;
+    e.preventDefault()
+    searchTerm = searchTermMain.value
+    // window.location.href = `/client/search.html?search=${searchTerm}`;
+    window.location.href = `C:/Users/Miz/Desktop/Kamkwamba/assignments/googleliam/Google-mock/client/search.html?search=${searchTerm}`
 }
 
 //for random
