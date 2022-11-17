@@ -19,11 +19,12 @@ body {
 }
 
 .websites{
-  margin-left: 150px;
+  margin-left: 20px;
   font-family: 'PT Sans', sans-serif;}
 
 #googleResults{
-  margin-left: 8px;
+  position: relative;
+  margin-left: 0px;
   padding-top: 5px;
   padding-bottom: 5px;
 }

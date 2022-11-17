@@ -1,16 +1,15 @@
-const data = require('../data');
+const data = require('./data');
 
-class SearchItem {
+class CountrySearch {
     constructor(data) {
         this.id = data.id;
-        this.url = data.url;
-        this.breadcrumb = data.breadcrumb;
         this.title = data.title;
-        this.description = data.description;
+        this.breadcrumb = data.breadcrumb;
+        this.desc = data.desc;
     }
 
     static get all() {
-        const searches = data.map((search) => new SearchItem(search))
+        const searches = data.map((search) => new CountrySearch(search))
         return searches;
     }
 
@@ -19,10 +18,10 @@ class SearchItem {
         if (!sData){
             return;
         }
-        const search = new SearchItem(sData);
+        const search = new CountrySearch(sData);
         return search;
     }
 
 }
 
-module.exports = SearchItem;
+module.exports = CountrySearch;
