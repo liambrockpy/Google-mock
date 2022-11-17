@@ -148,6 +148,51 @@ li{
   cursor: pointer;
 }
 
+.tab-bar {
+  height: 58px;
+  color: #70757a;
+  font-size: 14px;
+  font-family: Google Sans,arial,sans-serif;
+}
+
+.tab-bar-flex {
+  position: relative;
+  white-space: nowrap;
+  align-items: baseline;
+  display: flex;
+  float: left;
+  justify-content: space-between;
+}
+
+.tab-bar-flex > div {
+  margin-left: 170px;
+}
+
+.tb-item-sel {
+  color: #1a73e8;
+}
+
+.bar-sel {
+  background: #1a73e8;
+  height: 3px;
+  margin-top: 11px;
+}
+
+.tb-item {
+  display: inline-block;
+  height: 13px;
+  line-height: 16px;
+  margin: 11px 1px 0;
+  padding: 17px 12px 11px 10px;
+}
+
+.tb-icon {
+  display: inline-block;
+  height: 16px;
+  width: 16px; 
+  vertical-align: text-bottom;
+}
+
 footer{
   position: absolute;
   margin-top: -50px;
