@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/travellogo.png">
+    <title>Homepage</title>
+</head>
+<body>
+    <!-- main page for google -->
+    <section id="mainPage">
+        <!-- tiny logo to be centered -->
+        <div class="logo">
+            <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo" onclick = "iconRefresh()" />
+        </div>
+        <!-- search boxes -->
+        <div class="box">
+            <form action="GET">
+                <label for="search">
+                <div class="textbox">
+                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzUycHQiIGhlaWdodD0iNzUycHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDc1MiA3NTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8ZyBmaWxsPSIjZDJkMmQyIj4KICA8cGF0aCBkPSJtMzE0LjQyIDQ1NS4wMWMtODAuNSAwLTE0NS45OC02NS40OTItMTQ1Ljk4LTE0NS45OS0wLjAwMzkwNi04MC40OTYgNjUuNDg0LTE0NS45OCAxNDUuOTgtMTQ1Ljk4czE0NS45OSA2NS40OTIgMTQ1Ljk5IDE0NS45OWMtMC4wMDM5MDYgODAuNS02NS40OTIgMTQ1Ljk4LTE0NS45OSAxNDUuOTh6bTAtMjU0LjE2Yy01OS42NDggMC0xMDguMTggNDguNTI3LTEwOC4xOCAxMDguMTggMCA1OS42NDggNDguNTI3IDEwOC4xOCAxMDguMTggMTA4LjE4IDU5LjY0OCAwIDEwOC4xOC00OC41MjcgMTA4LjE4LTEwOC4xOCAwLTU5LjY0OC00OC41MjctMTA4LjE4LTEwOC4xOC0xMDguMTh6Ii8+CiAgPHBhdGggZD0ibTU0OS41NiA1ODEuNTUtMTMzLjE5LTEzMy4xOWMtMy40NjA5LTMuNDYwOS0zLjQ2MDktOS4xMjg5IDAtMTIuNTk4bDI0LjUzOS0yNC41MzljMy40NjA5LTMuNDYwOSA5LjEyODktMy40NjA5IDEyLjU5OCAwbDEzMy4xOSAxMzMuMmMzLjQ2MDkgMy40NjA5IDMuNDYwOSA5LjEyODkgMCAxMi41OThsLTI0LjUzOSAyNC41MzljLTMuNDY0OCAzLjQ2MDktOS4xMzI4IDMuNDYwOS0xMi41OTgtMC4wMDM5MDZ6Ii8+CiA8L2c+Cjwvc3ZnPgo=" alt="magnifying glass">
+                    <input type="text" name="search" id="search">
+                </div>
+                </label>
+            </form>
+        </div>
+        <!-- buttons for searching -->
+        <div class="buttons">
+            <span class="button">
+                <!-- google button -->
+                <input type="button" id="sbutton" value="Google Search">
+            </span>
+
+            <span class="button">
+                <!-- im feeling lucky button -->
+                <input type="button" id="lucky" value="I'm Feeling Lucky">
+            </span>
+        </div>
+
+    </section>
+    <!-- section to showcase the results based on user search -->
+    <section id="googleResults">
+    </section>
+
+    <footer>
+        <div class="footer-country">United Kingdom</div>
+        <div class="footer-about">
+            <div>
+                <a href="https://www.google.com/intl/en_uk/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1" class="footer-link">Advertising</a>
+                <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1" class="footer-link">Business</a>
+                <a href="https://google.com/search/howsearchworks/?fg=1" class="footer-link">How Search works</a>
+            </div>
+            <div>
+                <a href="https://sustainability.google/intl/en-GB/carbon-free/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=" class="footer-link">
+                    <img class="carbon-img" src="./assets/carbon.png" alt="">
+                    <span style="vertical-align: top;">Carbon neutral since 2007</span>
+                </a>
+            </div>
+            <div>
+                <a href="https://policies.google.com/privacy?hl=en-GB&fg=1" class="footer-link">Privacy</a>
+                <a href="https://policies.google.com/terms?hl=en-GB&fg=1" class="footer-link">Terms</a>
+                <a href="" class="footer-link">Settings</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" href="assets/travellogo.png">
+    <script defer src="script.js"></script>
+    <title>Google Search</title>
+</head>
+<body>
+    <div class="content">
+        <div class="searchPage" id="searchPage">
+            <img id="googleLogo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo" onclick = "iconRefresh()" />
+            <br>
+            <form id="searchform" >
+              <table>
+                  <tr>
+                      <td>
+                          <input type="search" id="search_bar" placeholder="Search for 'Canada' or 'New Zealand'">
+                      </td>
+
+                      <td>
+                          <div class="search_buttons" >
+                          <input class="submit_buttons" type="submit" value="Google Search" id="submitButton1">
+                          <input class="submit_buttons" type="submit" value="I'm Feeling Lucky" name="feelinglucky" id="submitButton2">
+                          </div>
+                      </td>
+                  </tr>
+              </table>  
+
+              </form>
+              <!--  -->
+              <div class="icons">
+                <i class="uil uil-setting menu"></i>
+                <i class="uil uil-apps menu"></i>
+              </div>
+        </div>
+  
+        <br>
+  
+      <div class="websites">
+        <div id="googleResults">
+
+        </div> 
+      </div>
+      </div>
+
+</body>
+</html>
