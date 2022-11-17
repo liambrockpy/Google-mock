@@ -1,4 +1,4 @@
-let index=1;
+let index = 1;
 const resultList = document.getElementById('googleResults');
 resultList.innerHTML = "";
 
@@ -8,7 +8,7 @@ const fetchAsync = async (index) => {
     console.log(googleData);
 }
 
-async function append(input){
+async function append(input) {
     let m;
     let n;
     if (input === 'canada') {
@@ -20,8 +20,8 @@ async function append(input){
     } else if (input === 'unitedkingdom') {
         m = 18;
         n = 30;
-    } 
-    for(let i=m; i<n; i++){
+    }
+    for (let i = m; i < n; i++) {
         let dbCountry = await fetch(`http://localhost:3000/${i}`)
         let grabTheGoods = await dbCountry.json();
         console.log(grabTheGoods);
@@ -34,23 +34,23 @@ async function append(input){
         let li = document.createElement('li');
         li.textContent = grabTheGoods.country
         li.className = "country"
-        div.appendChild(li); 
+        div.appendChild(li);
         div.appendChild(makeitbreak)
 
         let li2 = document.createElement('a');
         li2.textContent = grabTheGoods.title;
         li2.className = "title"
         li2.href = grabTheGoods.url
-        div.appendChild(li2); 
+        div.appendChild(li2);
         div.appendChild(makeitbreak)
 
         let li3 = document.createElement('li');
         li3.textContent = grabTheGoods.desc;
         console.log(grabTheGoods.desc);
         li3.className = "description"
-        div.appendChild(li3); 
+        div.appendChild(li3);
         div.appendChild(makeitbreak)
-        
+
     }
 }
 
@@ -73,22 +73,22 @@ form.addEventListener('submit', (e) => {
     const searchQuery = document.getElementById('search_bar').value
 
     // filters non-letters
-    const filter = /[^A-Za-z]/g; 
+    const filter = /[^A-Za-z]/g;
     const filteredQuery = searchQuery.replace(filter, '');
 
     // error alert
     const search = filteredQuery.toLowerCase()
     const match = (search === 'canada') || (search === 'newzealand') || (search === 'unitedkingdom');
-    if(match && searchCount === 1) {
+    if (match && searchCount === 1) {
         append(search)
     } else if (match && randomCount === 1) {
         randomFetch(search)
-    } else if(search === '' && randomCount === 1) {
+    } else if (search === '' && randomCount === 1) {
         randomWebsite()
-    } else{
+    } else {
         alert(`Search query for ${searchQuery} does not exist yet. Only "canada", "newzealand", or "unitedkingdom" instead.`)
     }
-    
+
     clear()
     searchCount = 0
     randomCount = 0
@@ -129,4 +129,3 @@ const btn = document.getElementById('submitButton1');
 //         // h5.setAttribute("src", `$(data.name).jpeg`);
 //     })
 // }
-

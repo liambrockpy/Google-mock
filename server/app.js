@@ -19,9 +19,9 @@ app.get('/random', (req, res) => {
         const num = Math.floor(Math.random() * 30);
         const selectedSearch = CountrySearch.findById(num);
         res.send(selectedSearch);
-    } catch(err) {
+    } catch (err) {
         console.log(err);
-        res.status(404).send({message: err.message});
+        res.status(404).send({ message: err.message });
     }
 })
 
@@ -30,31 +30,31 @@ app.get('/random/canada', (req, res) => {
         const num = Math.floor(Math.random() * 10) + 1;
         const selectedSearch = CountrySearch.findById(num);
         res.send(selectedSearch);
-    } catch(err) {
+    } catch (err) {
         console.log(err);
-        res.status(404).send({message: err.message});
+        res.status(404).send({ message: err.message });
     }
 })
 
 app.get('/random/newzealand', (req, res) => {
     try {
-        const num = Math.floor(Math.random() * (20 - 11 + 1) ) + 11;
+        const num = Math.floor(Math.random() * (20 - 11 + 1)) + 11;
         const selectedSearch = CountrySearch.findById(num);
         res.send(selectedSearch);
-    } catch(err) {
+    } catch (err) {
         console.log(err);
-        res.status(404).send({message: err.message});
+        res.status(404).send({ message: err.message });
     }
 })
 
 app.get('/random/unitedkingdom', (req, res) => {
     try {
-        const num = Math.floor(Math.random() * (30 - 21 + 1) ) + 21;
+        const num = Math.floor(Math.random() * (30 - 21 + 1)) + 21;
         const selectedSearch = CountrySearch.findById(num);
         res.send(selectedSearch);
-    } catch(err) {
+    } catch (err) {
         console.log(err);
-        res.status(404).send({message: err.message});
+        res.status(404).send({ message: err.message });
     }
 })
 
@@ -68,7 +68,7 @@ app.get('/:id', (req, res) => {
         res.send(selectedSearch);
     } catch (err) {
         console.log(err);
-        res.status(404).send({message: err.message})
+        res.status(404).send({ message: err.message })
     }
 })
 
@@ -76,7 +76,6 @@ app.get('/:id', (req, res) => {
 app.listen(port, () => {
     console.log(`I am listening at http://localhost:${port}`)
 });
-
 // parse JSON into JS
 app.use(bodyParser.json());
 // enable CORS for all requests
