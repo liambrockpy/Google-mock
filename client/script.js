@@ -13,13 +13,13 @@ async function append(input) {
     let n;
     if (input === 'canada') {
         m = 1;
-        n = 9;
+        n = 11;
     } else if (input === 'newzealand') {
-        m = 9;
-        n = 17;
+        m = 11;
+        n = 21;
     } else if (input === 'unitedkingdom') {
-        m = 17;
-        n = 25;
+        m = 21;
+        n = 31;
     }
     for (let i = m; i < n; i++) {
         let dbCountry = await fetch(`http://localhost:3000/${i}`)
@@ -70,8 +70,7 @@ btn2.addEventListener('click', () => randomCount++)
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     console.log(e.target.value);
-    const searchQuery = document.getElementById('search_bar').value
-
+    const searchQuery = document.getElementById('search_bar').value;
     // filters non-letters
     const filter = /[^A-Za-z]/g;
     const filteredQuery = searchQuery.replace(filter, '');
@@ -88,7 +87,6 @@ form.addEventListener('submit', (e) => {
     } else {
         alert(`Search query for ${searchQuery} does not exist yet. Only "canada", "newzealand", or "unitedkingdom" instead.`)
     }
-
     clear()
     searchCount = 0
     randomCount = 0
