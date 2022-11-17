@@ -1,5 +1,9 @@
-// const request = require('supertest')
-// const app = require('../app')
+const request = require('supertest')
+const app = require('../app')
+
+describe('', () => {
+    it.todo('')
+})
 
 // describe(`GET / with query`, () => {
 //     it('should respond 200 with all search results related to query', async () => {
