@@ -1,6 +1,10 @@
 let index = 1;
 const resultList = document.getElementById('googleResults');
 resultList.innerHTML = "";
+const searchBar = document.querySelector('#search_bar')
+
+const queryString = window.location.href.split('=')[1];
+searchBar.value = queryString
 
 const fetchAsync = async (index) => {
     const dbFile = await fetch(`http://localhost:3000/random/${index}`)
