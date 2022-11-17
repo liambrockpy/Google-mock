@@ -4,7 +4,7 @@ resultList.innerHTML = "";
 const searchBar = document.querySelector('#search_bar')
 
 const queryString = window.location.href.split('=')[1];
-searchBar.value = queryString
+
 
 async function append(input) {
     let m;
