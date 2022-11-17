@@ -7,8 +7,6 @@ const CountrySearch = require('./search')
 const app = express();
 // const router = express.Router();
 
-const port = 3000;
-
 app.get('/', (req, res) => {
     const search = CountrySearch.all
     res.send(search)
@@ -72,10 +70,6 @@ app.get('/:id', (req, res) => {
     }
 })
 
-//create a global event listener
-app.listen(port, () => {
-    console.log(`I am listening at http://localhost:${port}`)
-});
 // parse JSON into JS
 app.use(bodyParser.json());
 // enable CORS for all requests
