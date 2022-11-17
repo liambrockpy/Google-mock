@@ -58,8 +58,7 @@ li{
 
 #googleLogo{
   float: left;
-  display: block;
-  width: 150px;
+  width: 200px;
   margin-top: 22px;
   margin-left: 15px;
 }
@@ -75,13 +74,10 @@ li{
 #search_bar {
   border-radius: 40px;
   width: 585px;
-  /* margin: auto; */
   height: 39px;
   border: .7px solid #acacac;
   background-color: #fff;
   box-shadow:0px 1px 4px #E4E4E4;
-  /* margin-bottom: 20px;
-  margin-left: 35%; */
   outline: none;
   text-indent: 15px;
   float: right;
