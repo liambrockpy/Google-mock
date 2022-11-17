@@ -18,8 +18,8 @@ async function append(input) {
         m = 9;
         n = 17;
     } else if (input === 'unitedkingdom') {
-        m = 18;
-        n = 30;
+        m = 17;
+        n = 25;
     }
     for (let i = m; i < n; i++) {
         let dbCountry = await fetch(`http://localhost:3000/${i}`)
