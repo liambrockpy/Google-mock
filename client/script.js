@@ -16,7 +16,7 @@ async function append(input) {
         n = 9;
     } else if (input === 'newzealand') {
         m = 9;
-        n = 18;
+        n = 17;
     } else if (input === 'unitedkingdom') {
         m = 18;
         n = 30;

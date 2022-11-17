@@ -4,7 +4,6 @@ class CountrySearch {
     constructor(data) {
         this.id = data.id;
         this.title = data.title;
-        // this.url = data.url;
         this.breadcrumb = data.breadcrumb;
         this.desc = data.desc;
     }
