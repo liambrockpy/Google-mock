@@ -1,6 +1,10 @@
 let index = 1;
 const resultList = document.getElementById('googleResults');
 resultList.innerHTML = "";
+const searchBar = document.querySelector('#search_bar')
+
+const queryString = window.location.href.split('=')[1];
+searchBar.value = queryString
 
 const fetchAsync = async (index) => {
     const dbFile = await fetch(`http://localhost:3000/random/${index}`)
@@ -103,12 +107,12 @@ const btn = document.getElementById('submitButton1');
 // // searchBtn.addEventListener('click', getAllResults);
 // // luckyBtn.addEventListener('click', getRandomResult)
 // const myForm = document.querySelector("form");
-// myForm.addEventListener("submit", getGoogleResults)
+// myForm.addEventListener("submit", getGoogleResultsApi)
 
 // const resultList = document.getElementById('googleResults');
 // resultList.innerHTML = "";
 
-// function getGoogleResults(e){
+// function getGoogleResultsApi(e){
 //     e.preventDefault();
 //     // let h1 = document.getElementById("marvelname");
 //     // let h2 = document.getElementById("director");
