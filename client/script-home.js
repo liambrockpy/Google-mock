@@ -12,7 +12,7 @@ function getGoogleResults(e) {
     e.preventDefault();
     let searchTerm = searchTermMain.value;
     let miz = "C:/Users/Miz/Desktop/Kamkwamba/assignments/googleliam/Google-mock";
-    window.location.href = `${miz}/client/search.html?search=${searchTerm}`;
+    window.location.href = `../client/search.html?search=${searchTerm}`;
 }
 
 //for random
@@ -41,7 +41,6 @@ function getLucky(e){
     .then((response) => response.json())
     .catch(data => console.log(data))
     .then(data => {
-        // console.log(data.breadcrumb);
         window.location.href = data.breadcrumb;
     })
 }

@@ -2,13 +2,6 @@ let index = 1;
 const resultList = document.getElementById('googleResults');
 resultList.innerHTML = "";
 
-const fetchAsync = async (index) => {
-    const dbFile = await fetch(`http://localhost:3000/random/${index}`)
-    const googleData = await dbFile.json();
-    console.log(googleData);
-}
-
-
 async function append(input) {
     let m;
     let n;
@@ -51,7 +44,6 @@ async function append(input) {
         li3.className = "description"
         div.appendChild(li3);
         div.appendChild(makeitbreak)
-
     }
 }
 
@@ -59,64 +51,65 @@ async function clear() {
     resultList.innerHTML = '';
 }
 
-//random button feature
-// const form = document.getElementById('searchform');
-// const btn1 = document.getElementById('submitButton1');
-// const btn2 = document.getElementById('submitButton2');
+// random button feature
+const form = document.getElementById('searchform');
+const btn1 = document.getElementById('submitButton1');
+const btn2 = document.getElementById('submitButton2');
 
-// let searchCount = 0;
-// let randomCount = 0;
+let didTheyCount = 0;
+let randomCount = 0;
 
-// btn1.addEventListener('click', () => searchCount++)
-// btn2.addEventListener('click', () => randomCount++)
+btn1.addEventListener('click', () => didTheyCount++)
+btn2.addEventListener('click', () => randomCount++)
 
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault()
-//     console.log(e.target.value);
-//     const userInput = document.getElementById('searchbar').value;
-    
-//     // filters non-letters
-//     const filter = /[^A-Za-z]/g;
-//     const filteredQuery = userInput.replace(filter, '');
-//     // error alert
-//     const search = filteredQuery.toLowerCase()
-//     const match = (search === 'canada') || (search === 'newzealand') || (search === 'unitedkingdom');
-   
-//     if (match && searchCount === 1) {
-//         append(search)
-//     } else if (match && randomCount === 1) {
-//         randomFetch(search)
-//     } else if (search === '' && randomCount === 1) {
-//         randomWebsite()
-//     } else {
-//         alert(`Search query for ${userInput} does not exist yet. Only "canada", "newzealand", or "unitedkingdom" instead.`)
-//     }
-//     clear()
-//     searchCount = 0
-//     randomCount = 0
-// })
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    console.log(e.target.value);
+    const userInput = document.getElementById('searchbar').value;
+    const filter = /[^A-Za-z]/g;
+    const filteredQuery = userInput.replace(filter, '');
+    const search = filteredQuery.toLowerCase()
+    const match = (search === 'canada') || (search === 'newzealand') || (search === 'unitedkingdom');
+    if (match && didTheyCount === 1) {
+        append(search)
+    } else if (match && randomCount === 1) {
+        getAssociatedWebsite(search)
+    } else if (search === '' && randomCount === 1) {
+        getRandomWebsite()
+    } else {
+        alert(`Search query for ${userInput} does not exist yet. Only "canada", "newzealand", or "unitedkingdom" instead.`)
+    }
 
+    clear()
+    didTheyCount = 0
+    randomCount = 0
+})
 
+const searchTermMain2 = document.querySelector('#searchbar')
 
-// const btn = document.getElementById('submitButton1');
-// const btn22 = document.getElementById('submitButton2')
+async function getAssociatedWebsite(search){
+    let searchTerm = searchTermMain2.value;
+    console.log("works");
+    const resultList = document.getElementById('lucky');
+    let url = `http://localhost:3000/random/${searchTerm}`;
+    await fetch(url)
+    .then((response) => response.json())
+    .catch(data => console.log(data))
+    .then(data => {
+        // console.log(data.breadcrumb);
+        window.location.href = data.breadcrumb;
+    })
+}
 
-// //random
-// const randomFetch = async (country) => {
-//     const randData = await fetch(`http://localhost:3000/random/${country}`)
-//     const randomData = await randData.json();
-//     console.log(randomData)
-
-//     window.location.href = randomData.url
-// }
-
-// async function randomWebsite(){
-//     let getAwebsite = await fetch(`http://localhost:3000/random`)
-//     let countryDataAdd= await getAwebsite.json();
-//     console.log(countryDataAdd);
-
-//     window.location.href = countryDataAdd.url
-// }
-
-// fetchAsync(index).catch(err => console.log(err));
-
+async function getRandomWebsite(){
+    console.log("works");
+    const resultList = document.getElementById('lucky');
+    let url = `http://localhost:3000/random`;
+    await fetch(url)
+    .then((response) => response.json())
+    .catch(data => console.log(data))
+    .then(data => {
+        // console.log(data.breadcrumb);
+        window.location.href = data.breadcrumb;
+    })
+}
