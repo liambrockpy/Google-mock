@@ -9,5 +9,6 @@ searchAllBtn.addEventListener('click', getGoogleResults)
 function getGoogleResults(e) {
     e.preventDefault()
     searchTerm = searchTermMain.value
-    window.location.href = `/client/search.html?search=${searchTerm}`;
+    // window.location.href = `/client/search.html?search=${searchTerm}`;
+    window.location.href = `C:/Users/Miz/Desktop/Kamkwamba/assignments/googleliam/Google-mock/client/search.html?search=${searchTerm}`
 }
