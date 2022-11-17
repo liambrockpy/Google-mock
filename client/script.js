@@ -17,13 +17,13 @@ async function append(input) {
     let n;
     if (input === 'canada') {
         m = 1;
-        n = 9;
+        n = 11;
     } else if (input === 'newzealand') {
-        m = 9;
-        n = 18;
+        m = 11;
+        n = 21;
     } else if (input === 'unitedkingdom') {
-        m = 18;
-        n = 30;
+        m = 21;
+        n = 31;
     }
     for (let i = m; i < n; i++) {
         let dbCountry = await fetch(`http://localhost:3000/${i}`)
@@ -74,8 +74,7 @@ btn2.addEventListener('click', () => randomCount++)
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     console.log(e.target.value);
-    const searchQuery = document.getElementById('search_bar').value
-
+    const searchQuery = document.getElementById('search_bar').value;
     // filters non-letters
     const filter = /[^A-Za-z]/g;
     const filteredQuery = searchQuery.replace(filter, '');
@@ -92,44 +91,9 @@ form.addEventListener('submit', (e) => {
     } else {
         alert(`Search query for ${searchQuery} does not exist yet. Only "canada", "newzealand", or "unitedkingdom" instead.`)
     }
-
     clear()
     searchCount = 0
     randomCount = 0
 })
 
-
-
 const btn = document.getElementById('submitButton1');
-
-
-
-// // searchBtn.addEventListener('click', getAllResults);
-// // luckyBtn.addEventListener('click', getRandomResult)
-// const myForm = document.querySelector("form");
-// myForm.addEventListener("submit", getGoogleResultsApi)
-
-// const resultList = document.getElementById('googleResults');
-// resultList.innerHTML = "";
-
-// function getGoogleResultsApi(e){
-//     e.preventDefault();
-//     // let h1 = document.getElementById("marvelname");
-//     // let h2 = document.getElementById("director");
-
-//     let usersearch =document.getElementById("search_bar").value;
-//     let url = `http://localhost:3000/search?value=${usersearch}`;
-//     fetch(url)
-//     .then((response) => response.json())
-//     .catch(data => console.log(data))
-//     .then(data => {
-//         console.log(data);
-//         // h1.textContent=data.name;
-//         // h2.textContent=data.director;
-//         // h3.textContent=data.phase;
-//         // h4.textContent=data.cast;
-//         // let img = "img/" + data.id + ".jpeg";
-//         // h5.setAttribute("src", img);
-//         // h5.setAttribute("src", `$(data.name).jpeg`);
-//     })
-// }
